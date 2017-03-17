@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -28,8 +29,6 @@ public class MemberMain {
 			Object obj = par.parse(fr);
 			
 			JSONObject ob=(JSONObject)obj;
-			
-			
 			
 			MembersUpdate memUp =new MembersUpdate();
 			
@@ -72,7 +71,6 @@ public class MemberMain {
 			e.printStackTrace();
 		}
 		
-		
-	}
-
+	}	
 }
+	

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Employee_Table")
+@Table(name="Employee_Info")
 public class Employee implements Serializable {
 
 	@Id
@@ -59,11 +59,5 @@ public class Employee implements Serializable {
 		return "Employee [id=" + id +", name=" + name + ", salary=" + salary + ", department="
 				+ department + "]";
 	}
-	
-
-	
-
-	
-	
 	
 }
