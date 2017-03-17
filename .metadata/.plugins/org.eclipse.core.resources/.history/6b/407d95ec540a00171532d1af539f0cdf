@@ -1,0 +1,57 @@
+package com.bridgeLabz.main;
+
+import java.io.FileReader;
+import java.io.IOException;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import com.bridgeLabz.dao.MemUtility;
+import com.bridgeLabz.dto.Members;
+
+public class JsonMain {
+
+	public static void main(String[] args) {
+
+		try {
+			
+			FileReader fr=new FileReader("/home/bridgeit/vinay/JavaEclips/Hibernate/JSON/members.txt");
+			
+			JSONParser par=new JSONParser();
+			Object obj = par.parse(fr);
+			
+			JSONObject ob=(JSONObject)obj;
+			
+			Members mem=new Members();
+			String mail=(String) ob.get("mail");
+			mem.setMail(mail);
+			
+			String name=(String)ob.get("name");
+			mem.setName(name);
+			
+			String city=(String)ob.get("city");
+			mem.setCity(city);
+			
+			String country=(String)ob.get("country");
+			mem.setCountry(country);
+			
+			String phone=(String)ob.get("phone");
+			mem.setPhone();
+			
+			
+			System.out.println((String) ob.get("mail"));
+			System.out.println((String) ob.get("name"));
+			System.out.println((String) ob.get("city"));
+			System.out.println((String) ob.get("country"));
+			System.out.println((String) ob.get("phone"));
+			MemUtility mu=new MemUtility();
+			
+			mu.insert(mem);
+			
+		} 
+		catch (IOException | ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

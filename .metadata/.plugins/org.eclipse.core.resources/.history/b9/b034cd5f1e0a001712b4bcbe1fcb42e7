@@ -1,0 +1,15 @@
+package com.utility;
+
+import com.dto.Employee;
+
+public class EmpUtility {
+
+	public static void main(String[] args) {
+		
+		Employee emp= new Employee();
+		emp.setId(1);
+		emp.setName("Surya");
+		emp.setSalary(2000);
+	}
+
+}

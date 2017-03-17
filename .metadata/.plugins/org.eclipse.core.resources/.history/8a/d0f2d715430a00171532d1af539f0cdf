@@ -1,0 +1,12 @@
+package com.bridgeLabz.dto;
+
+import java.io.Serializable;
+
+public class Members implements Serializable {
+
+	String name;
+	String mail;
+	String city;
+	String country;
+	long phone;
+}

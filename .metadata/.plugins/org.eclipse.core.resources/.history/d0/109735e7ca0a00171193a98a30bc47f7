@@ -1,0 +1,69 @@
+package com.bridgelabz.main;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import com.bridgelabz.dao.MembersUpdate;
+import com.bridgelabz.dto.Members_123;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		
+		Members_123 mem=new Members_123();
+		
+		FileReader fr;
+		JSONParser par=new JSONParser();
+		try {
+			fr = new FileReader("/home/bridgeit/Desktop/members.json");
+			Object obj = par.parse(fr);
+			
+			JSONObject ob=(JSONObject)obj;
+			
+			
+			mem.setId(1);
+			
+			String mail=(String) ob.get("mail");
+			mem.setMail(mail);
+			
+			String name=(String)ob.get("name");
+			mem.setName(name);
+			
+			String city=(String)ob.get("city");
+			mem.setCity(city);
+			
+			String country=(String)ob.get("country");
+			mem.setCountry(country);
+			
+			String phone=(String)ob.get("phone");
+			mem.setPhone(phone);
+			
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		/*mem.setId(1);
+		mem.setName("dg");
+		mem.setMail("suraaa");
+		mem.setCity("Hassan");
+		mem.setCountry("India");
+		mem.setPhone("989665");*/
+		
+		MembersUpdate update=new MembersUpdate();
+		
+		update.save(mem);
+	}
+
+}

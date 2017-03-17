@@ -1,0 +1,16 @@
+package com.bridgelabz.main;
+
+import com.bridgelabz.dto.Members_123;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		
+		Members_123 mem=new Members_123();
+		
+		mem.setId(1);
+		mem.setName("Sura");
+		mem.setMail("suraaa");
+	}
+
+}

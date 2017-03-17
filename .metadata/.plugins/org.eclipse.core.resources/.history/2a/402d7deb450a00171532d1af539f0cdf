@@ -1,0 +1,6 @@
+package com.bridgeLabz.dao;
+
+public class MemUtility {
+
+	public void insert(Members mem)
+}

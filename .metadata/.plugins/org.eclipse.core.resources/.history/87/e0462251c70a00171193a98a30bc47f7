@@ -1,0 +1,11 @@
+package com.bridgelabz.dao;
+
+import com.bridgelabz.dto.Members_123;
+
+public class MembersUpdate {
+
+	public void save(Members_123 mem) {
+		
+		
+	}
+}

@@ -1,0 +1,21 @@
+package com.bridgelabz.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Members_Info")
+public class Members_123 {
+
+	@Id
+	@Column(name="Mem_ID")
+	private int id;
+	@Column(name="Name")
+	private String name;
+	private String mail;
+	private String city;
+	private String country;
+	private String phone;
+}

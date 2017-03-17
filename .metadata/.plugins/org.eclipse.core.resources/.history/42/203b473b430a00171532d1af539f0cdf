@@ -1,0 +1,17 @@
+package com.bridgeLabz.dto;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table (name="Members")
+public class Members implements Serializable {
+
+	
+	String name;
+	String mail;
+	String city;
+	String country;
+	long phone;
+}

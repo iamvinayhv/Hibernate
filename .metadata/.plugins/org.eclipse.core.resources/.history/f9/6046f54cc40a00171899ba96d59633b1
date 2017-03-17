@@ -1,0 +1,23 @@
+package com.bridgeLabz.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgeLabz.dto.Members;
+
+public class MemUtility {
+
+	public void saveData(Members mem) {
+		
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		Transaction transaction=session.beginTransaction();
+		session.save(mem);
+		transaction.commit();
+	}
+}

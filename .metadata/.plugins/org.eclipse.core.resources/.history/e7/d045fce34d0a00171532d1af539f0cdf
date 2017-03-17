@@ -1,0 +1,35 @@
+package com.bridgeLabz.main;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class JsonMain {
+
+	public static void main(String[] args) {
+
+		
+		int x;
+		
+		try {
+			
+			FileReader fr=new FileReader("/home/bridgeit/vinay/JavaEclips/Hibernate/JSON/members.txt");
+			x=fr.read();
+			
+			JSONParser par=new JSONParser();
+			Object obj = par.parse(fr);
+			
+			JSONObject ob=(JSONObject)obj;
+			
+			String mail=(String) ob.get("mail");
+			System.out.println(mail);
+		} 
+		catch (IOException | ParseException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

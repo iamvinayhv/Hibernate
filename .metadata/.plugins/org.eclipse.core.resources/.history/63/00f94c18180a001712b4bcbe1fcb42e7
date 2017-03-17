@@ -1,0 +1,20 @@
+package com.util;
+
+import com.dao.UserDao;
+import com.dto.User;
+
+public class HebernateTest {
+
+	public static void main(String[] args) {
+
+		User user=new User();
+		user.setId(1);
+		user.setName("Ramesh");
+		user.setAge(24);
+		
+		UserDao dao=new UserDao();
+		
+		dao.saveUserData(user);
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.dao;
+
+import org.hibernate.cfg.Configuration;
+
+import com.dto.User;
+
+public class UserDao {
+
+	public void saveUserData(User user) {
+		
+		Configuration configuration=new Configuration();
+	}
+}
