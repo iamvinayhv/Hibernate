@@ -50,12 +50,6 @@ public class EmpUtility {
 		Transaction tx=session.beginTransaction();
 		
 		Employee emp=session.get(Employee.class, 1);
-		emp.setDepartment("Navy");
-		emp.setSalary(29000);
-		
-		session.update(emp);
-		tx.commit();
-		session.close();
 	}
 
 }
