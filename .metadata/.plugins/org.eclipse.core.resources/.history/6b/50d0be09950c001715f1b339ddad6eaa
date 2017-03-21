@@ -1,0 +1,37 @@
+package com.bridgeabz.main;
+
+import com.bridgelabz.dao.Student;
+import com.bridgelabz.dto.StudentDto;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+		/*Student student = new Student();
+		student.setName("Anil");
+		student.setDeptNo(103);
+		student.setAge(21);
+		
+		StudentDto st=new StudentDto();
+		st.saveData(student);*/
+
+		
+		/*StudentDto st=new StudentDto();
+		st.update(2,18);*/
+		
+		
+		/*StudentDto st=new StudentDto();
+		Student get=st.fetch(3);
+		System.out.println(get);*/
+		
+		
+		/*StudentDto st=new StudentDto();
+		st.delete(2);*/
+		
+		
+		StudentDto st=new StudentDto();
+		List students=st.fetchAll();
+		
+	}
+
+}

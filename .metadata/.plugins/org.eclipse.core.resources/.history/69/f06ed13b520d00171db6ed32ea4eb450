@@ -1,0 +1,17 @@
+package com.bridgelabz.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public class Employee {
+
+	@Id
+	@Column(name="ID")
+	private int id;
+	@Column(name="Emp_Name")
+	private String name;
+	private int salary;
+	private String dept;
+	private String password;
+	
+}

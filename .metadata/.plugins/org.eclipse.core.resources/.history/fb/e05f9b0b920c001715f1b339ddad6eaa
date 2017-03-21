@@ -1,0 +1,68 @@
+package com.bridgelabz.dto;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.dao.Student;
+
+public class StudentDto {
+
+	public void saveData(Student st)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		session.save(st);
+		tx.commit();
+		session.close();
+	}
+	
+	public void update(int pk,int age)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		Student st=(Student) session.get("com.bridgelabz.dao.Student", pk);
+		if(st!=null)
+		{
+			System.out.println(st.getName());
+			st.setAge(age);
+			session.update(st);
+			tx.commit();
+			System.out.println("updated");
+		}
+		else{
+			System.out.println("no Student");
+		}
+		session.close();
+	}
+	
+	public Student fetch(int id)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		Student st=session.get(Student.class, id);
+		session.close();
+		return st;
+	}
+	
+	public boolean delete(int pk)
+	{
+		Configuration configuration=new Configuration();
+	}
+}

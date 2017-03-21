@@ -8,8 +8,8 @@ public class HebernateTest {
 	public static void main(String[] args) {
 
 		User user=new User();
-		user.setId(3);
-		user.setName("Rajesh");
+		user.setId(2);
+		user.setName("Suresh");
 		user.setAge(20);
 		
 		UserDao dao=new UserDao();

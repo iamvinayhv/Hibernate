@@ -1,0 +1,55 @@
+package com.bridgelabz.servlets;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.BeanUtils;
+
+import com.bridgelabz.dao.EmployeeDAO;
+import com.bridgelabz.dto.Employee;
+
+
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Employee emp=new Employee();
+		
+		try {
+			BeanUtils.populate(emp, request.getParameterMap());
+			
+			EmployeeDAO empdao=new EmployeeDAO();
+			Employee result=empdao.login(emp);
+			
+			if(result!=null&&emp.getPassword().equals(result.getPassword()))
+			{
+				/*RequestDispatcher rd=request.getRequestDispatcher("Logcomplete.jsp");
+				request.setAttribute("user",result);
+				rd.forward(request, response);*/
+				
+				System.out.println("Completed");
+				System.out.println(result.getName());
+			}
+			else {
+				RequestDispatcher rd=request.getRequestDispatcher("loginerror.jsp");
+				rd.forward(request, response);
+			}
+			
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

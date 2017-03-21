@@ -1,0 +1,104 @@
+package com.bridgelabz.dto;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.dao.Student;
+
+public class StudentDto {
+
+	public void saveData(Student st)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		session.save(st);
+		tx.commit();
+		session.close();
+	}
+	
+	public void update(int pk,int age)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		Student st=(Student) session.get("com.bridgelabz.dao.Student", pk);
+		if(st!=null)
+		{
+			st.setAge(age);
+			session.update(st);
+			tx.commit();
+			System.out.println("updated");
+		}
+		else{
+			System.out.println("no Student");
+		}
+		session.close();
+	}
+	
+	public Student fetch(int id)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		Student st=session.get(Student.class, id);
+		session.close();
+		return st;
+	}
+	
+	public void delete(int pk)
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		Student st=(Student) session.get("com.bridgelabz.dao.Student", pk);
+		
+		if(st!=null)
+		{
+			session.delete(st);
+			tx.commit();
+			session.close();
+			System.out.println("Delted the record of Student having id:"+pk);
+		}
+		else {
+			System.out.println("Student with id "+pk+" notfound");
+		}
+	}
+	
+	
+	public List fetchAll()
+	{
+		Configuration configuration=new Configuration();
+		configuration.configure();
+		
+		SessionFactory factory=configuration.buildSessionFactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		
+		Query query=session.createQuery("from Student");
+		List students=query.list();
+		return students;
+	}
+}

@@ -1,0 +1,12 @@
+package com.bridgeabz.main;
+
+import com.bridgelabz.dto.StudentDto;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		StudentDto st=new StudentDto();
+
+	}
+
+}
