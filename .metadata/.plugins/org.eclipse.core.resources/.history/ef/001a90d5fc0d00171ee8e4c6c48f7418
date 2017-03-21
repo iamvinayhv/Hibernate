@@ -1,0 +1,11 @@
+package com.bridgelabz.utilSave;
+
+public class HumansDelete {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

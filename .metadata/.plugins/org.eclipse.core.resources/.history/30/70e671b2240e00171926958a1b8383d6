@@ -1,0 +1,11 @@
+package com.bridgelabz.oneonedto;
+
+public class Details {
+
+	private int id;
+	private String city;
+	private double salary;
+	private int age;
+	
+	Person person;
+}

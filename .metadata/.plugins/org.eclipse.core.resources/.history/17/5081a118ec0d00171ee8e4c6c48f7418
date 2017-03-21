@@ -1,0 +1,13 @@
+package com.bridgelabz.hqldto;
+
+public class Humans {
+
+	private int id;
+	private String name;
+	private double weight;
+	private double hight;
+	private String color;
+	
+	
+	
+}

@@ -1,0 +1,24 @@
+package com.bridgelabz.oneoneutil;
+
+import com.bridgelabz.oneonedao.PersonDao;
+import com.bridgelabz.oneonedto.Details;
+import com.bridgelabz.oneonedto.Person;
+
+
+public class PersonUtil {
+
+	public static void main(String[] args) {
+		
+		Details details=new Details();
+		
+		details.setCity("Mumbai");
+		details.setAge(30);
+		details.setSalary(10000);
+		
+		Person person=new Person();
+		person.setName("Rama");
+		person.setDetails(details);
+		
+		PersonDao dao=new PersonDao();
+	}
+}

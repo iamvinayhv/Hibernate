@@ -1,0 +1,15 @@
+package com.bridgelabz.oneoneutil;
+
+import com.bridgelabz.oneonedto.Details;
+
+public class PersonUtil {
+
+	public static void main(String[] args) {
+		
+		Details details=new Details();
+		
+		details.setCity("Mumbai");
+		details.setAge(30);
+		details.setSalary(10000);
+	}
+}

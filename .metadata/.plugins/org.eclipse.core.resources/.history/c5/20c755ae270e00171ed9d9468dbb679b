@@ -1,0 +1,12 @@
+package com.bridgelabz.oneonedao;
+
+import com.bridgelabz.oneonedto.Person;
+
+public class PersonDao {
+	
+	public void save(Person person)
+	{
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.bridgelabz.oneonedto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+public class Details {
+
+	private int id;
+	private String city;
+	private double salary;
+	private int age;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@PrimaryKeyJoinColumn()
+	Person person;
+}

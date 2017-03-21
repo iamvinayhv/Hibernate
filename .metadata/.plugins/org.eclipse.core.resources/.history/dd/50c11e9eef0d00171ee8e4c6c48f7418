@@ -1,0 +1,13 @@
+package com.bridgelabz.utilSave;
+
+import com.bridgelabz.hqldto.Humans;
+
+public class HumansSave {
+
+	public static void main(String[] args) {
+
+		Humans hum=new Humans();
+		hum.setName("BatMan");
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.bridgeLabz.hibrenate.dto;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
+public class Person {
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	private int id;
+	private String name;
+	
+	
+}

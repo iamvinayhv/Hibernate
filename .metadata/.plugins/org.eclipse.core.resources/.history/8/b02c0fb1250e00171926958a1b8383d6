@@ -1,0 +1,10 @@
+package oneonedao;
+
+public class PersonDao {
+
+	public void save(Person p)
+	{
+		
+	}
+	
+}

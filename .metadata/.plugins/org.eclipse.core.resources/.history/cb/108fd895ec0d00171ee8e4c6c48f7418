@@ -1,0 +1,31 @@
+package com.bridgelabz.hqldto;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Humans implements Serializable{
+
+	@Id@GeneratedValue
+	@Column(name="ID")
+	private int id;
+	@Column(name="Name")
+	private String name;
+	@Column(name="Weight")
+	private double weight;
+	@Column(name="Hight")
+	private double hight;
+	@Column(name="Color")
+	private String color;
+	
+	public Humans() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

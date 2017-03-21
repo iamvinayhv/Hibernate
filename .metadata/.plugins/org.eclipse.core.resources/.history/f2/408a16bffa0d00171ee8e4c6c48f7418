@@ -1,0 +1,99 @@
+package com.bridgelabz.daohql;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.hqldto.Humans;
+
+public class HumansDAO {
+
+	
+	private static SessionFactory factory;
+	
+	static{
+		Configuration configuration=new Configuration();
+		configuration.configure("humans.xml");
+		configuration.addAnnotatedClass(Humans.class);
+		
+		factory=configuration.buildSessionFactory();
+	}
+	
+	public static SessionFactory getFactory()
+	{
+		return factory;
+	}
+	
+	
+	public boolean addData(Humans hum)
+	{
+		Session session = null;
+		try{
+			SessionFactory factory=getFactory();
+			session=factory.openSession();
+			
+			Transaction tx=session.beginTransaction();
+			session.save(hum);
+			tx.commit();
+			return true;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		finally {
+			session.close();
+		}
+		
+		
+	}
+	
+	public List getAll()
+	{
+		Session session = null;
+		
+			SessionFactory factory=getFactory();
+			session=factory.openSession();
+			
+			Transaction tx=session.beginTransaction();
+			
+			Query query=session.createQuery("from Humans");
+			List list =query.list();
+			session.close();
+			return list;
+		
+	}
+	
+	public List fetch()
+	{
+		Session session = null;
+		
+		SessionFactory factory=getFactory();
+		session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		
+		Query query=session.createQuery("from Humans");
+		query.setFirstResult(1);
+		query.setMaxResults(3);
+		
+		List list=query.list();
+		return list;
+	}
+	
+	public void update()
+	{
+Session session = null;
+		
+		SessionFactory factory=getFactory();
+		session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		
+		Query query=session.createQuery("update Humans name=:n where id=:i");
+	}
+}

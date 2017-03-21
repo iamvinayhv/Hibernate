@@ -1,0 +1,11 @@
+package com.bridgelabz.utilSave;
+
+public class HumansGetAll {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

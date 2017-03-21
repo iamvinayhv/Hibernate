@@ -1,0 +1,9 @@
+package com.bridgelabz.oneoneutil;
+
+public class PersonUtil {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

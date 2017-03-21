@@ -1,0 +1,23 @@
+package com.bridgelabz.oneonedto;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
+import org.hibernate.annotations.GenericGenerator;
+
+public class Person {
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	private int id;
+	@Column(name="Name")
+	private String name;
+	
+	@JoinColumn(name="id")
+	private Details details;
+	
+	
+}

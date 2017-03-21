@@ -4,3 +4,7 @@
 1489909594253	Delete resource 'logRegApp'
 1489909668240	Delete resource 'Servers'
 1490002961749	Delete resource 'HybernateHQL'
+1490067236066	Delete resource 'CrudOparation'
+1490094258569	Delete resource 'One_One_Mapping/src/oneonedao'
+1490094297334	Delete resource 'One_One_Mapping/src/oneoneutil'
+1490094724096	Delete resource 'One_One_Mapping/src/com/bridgelabz/oneonedao'

@@ -1,0 +1,54 @@
+package com.bridgelabz.oneonedto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.GenericGenerator;
+
+public class Person {
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	private int id;
+	@Column(name="Name")
+	private String name;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id")
+	private Details details;
+	
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Details getDetails() {
+		return details;
+	}
+
+	public void setDetails(Details details) {
+		this.details = details;
+	}
+	
+	
+}

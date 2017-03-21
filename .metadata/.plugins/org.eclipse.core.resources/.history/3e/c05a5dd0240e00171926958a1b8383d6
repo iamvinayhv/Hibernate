@@ -1,0 +1,15 @@
+package com.bridgelabz.oneonedto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
+
+public class Details {
+
+	private int id;
+	private String city;
+	private double salary;
+	private int age;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	Person person;
+}

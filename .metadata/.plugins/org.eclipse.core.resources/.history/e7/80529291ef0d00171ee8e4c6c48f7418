@@ -1,0 +1,12 @@
+package com.bridgelabz.utilSave;
+
+import com.bridgelabz.daohql.HumansDAO;
+
+public class HumansSave {
+
+	public static void main(String[] args) {
+
+		HumansDAO hum=new HumansDAO();
+	}
+
+}

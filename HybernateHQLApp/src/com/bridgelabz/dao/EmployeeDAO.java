@@ -13,7 +13,8 @@ public class EmployeeDAO {
 	
 	static{
 		Configuration configuration=new Configuration();
-		configuration.configure();
+		
+	
 		
 		factory=configuration.buildSessionFactory();
 	
