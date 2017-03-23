@@ -1,0 +1,14 @@
+package com.bridgelabz.dao;
+
+import org.hibernate.cfg.Configuration;
+
+import com.bridgelabz.dto.Employee;
+
+public class EmployeeDAO {
+
+	
+	public void save(Employee employee)
+	{
+		Configuration configuration=new Configuration();
+	}
+}

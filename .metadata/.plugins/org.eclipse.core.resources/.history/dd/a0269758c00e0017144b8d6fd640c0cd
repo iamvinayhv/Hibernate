@@ -1,0 +1,21 @@
+package com.bridgelabz.util;
+
+import javax.xml.soap.Detail;
+
+import com.bridgelabz.dto.Details;
+import com.bridgelabz.dto.Employee;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		employee.setName("Hitler");
+		
+		Details detail=new Details();
+		detail.setMobile(8056332452l);
+		detail.setPhone(080226133l);
+		
+	}
+
+}

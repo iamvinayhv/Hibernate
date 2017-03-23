@@ -1,0 +1,36 @@
+2017-03-22 18:24:10,203 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/Maven/FirstMaven/pom.xml
+2017-03-22 18:24:12,300 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.bridgelabz:FirstMaven:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/Maven/FirstMaven/pom.xml.
+2017-03-22 18:32:40,764 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/Maven/firstTrial/pom.xml
+2017-03-22 18:32:41,488 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: my:firstTrial:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/Maven/firstTrial/pom.xml.
+2017-03-22 18:56:07,151 [Worker-4] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/firsttrial/pom.xml
+2017-03-22 18:56:09,046 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: my:firsttrial:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/firsttrial/pom.xml.
+2017-03-22 19:05:36,805 [Worker-11] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/bridgeit/vinay/JavaEclips/firsttrial
+2017-03-22 19:05:36,805 [Worker-11] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-03-22 19:19:03,200 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/Hibernate/fdszfd/pom.xml
+2017-03-22 19:19:03,907 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: my:fdszfd:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/Hibernate/fdszfd/pom.xml.
+2017-03-22 19:19:05,610 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2017-03-22 19:19:08,000 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2017-03-22 19:19:08,129 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2017-03-22 19:19:08,532 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2017-03-22 19:19:08,658 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2017-03-22 19:19:09,130 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2017-03-22 19:19:11,177 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /fdszfd/src/main/java
+2017-03-22 19:19:11,177 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /fdszfd/src/main/resources
+2017-03-22 19:19:11,178 [Worker-5] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /fdszfd/src/test/java
+2017-03-22 19:19:15,089 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
+2017-03-22 19:19:15,301 [Worker-5] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
+2017-03-22 19:19:15,349 [Worker-5] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 12 sec
+2017-03-22 19:21:00,661 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/Hibernate/firsttrial/pom.xml
+2017-03-22 19:21:01,044 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: my:firsttrial:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/Hibernate/firsttrial/pom.xml.
+2017-03-22 19:21:01,426 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /firsttrial/src/main/java
+2017-03-22 19:21:01,426 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /firsttrial/src/main/resources
+2017-03-22 19:21:01,426 [Worker-9] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /firsttrial/src/test/java
+2017-03-22 19:21:06,640 [Worker-9] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 5 sec
+2017-03-23 08:42:04,717 [Worker-2] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/bridgeit/vinay/JavaEclips/Hibernate/firsttrial
+2017-03-23 08:42:04,739 [Worker-2] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2017-03-23 08:53:00,839 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bridgeit/vinay/JavaEclips/Hibernate/firstMaven/pom.xml
+2017-03-23 08:53:01,623 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: my:firstMaven:0.0.1-SNAPSHOT @ /home/bridgeit/vinay/JavaEclips/Hibernate/firstMaven/pom.xml.
+2017-03-23 08:53:02,116 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /firstMaven/src/main/java
+2017-03-23 08:53:02,117 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /firstMaven/src/main/resources
+2017-03-23 08:53:02,117 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /firstMaven/src/test/java
+2017-03-23 08:53:06,559 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 5 sec

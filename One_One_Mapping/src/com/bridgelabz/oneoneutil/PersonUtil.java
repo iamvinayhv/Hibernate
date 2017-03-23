@@ -11,13 +11,13 @@ public class PersonUtil {
 		
 		Details details=new Details();
 		
-		details.setCity("Bangalore");
-		details.setAge(28);
-		details.setSalary(15000);
+		details.setCity("Bangaluru");
+		details.setAge(30);
+		details.setSalary(29000);
 		
 		
 		Person person=new Person();
-		person.setName("Shama");
+		person.setName("Mahesh");
 		person.setDetails(details);
 		details.setPerson(person);
 		
@@ -25,6 +25,6 @@ public class PersonUtil {
 		
 		
 		PersonDao dao=new PersonDao();
-		dao.save(details);
+		dao.save(person);
 	}
 }

@@ -1,0 +1,7 @@
+package com.bridgelabz.dto;
+
+public class Course {
+
+	private int id;
+	private int courseId;
+}

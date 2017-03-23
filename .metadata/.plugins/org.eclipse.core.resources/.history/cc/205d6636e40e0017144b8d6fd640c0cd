@@ -1,0 +1,40 @@
+package com.bridgelabz.util;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import com.bridgelabz.dao.StudentDAO;
+import com.bridgelabz.dto.Course;
+import com.bridgelabz.dto.Student;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+		
+		Student student=new Student();
+		student.setName("Rama");
+		
+		Course course1=new Course();
+		course1.setCourseName("Physics");
+		course1.setCourseId(1);
+		
+		Course course2=new Course();
+		course2.setCourseName("Biology");
+		course2.setCourseId(2);
+		
+		Collection<Course> collection=new ArrayList<Course>();
+		
+		collection.add(course1);
+		collection.add(course2);
+		
+		student.setCollection(collection);
+		
+		StudentDAO dao=new StudentDAO();
+		
+		dao.save(student);
+		
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.bridgelabz.dto;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name="Mant_Many_Student_Info")
+public class Student implements Serializable{
+
+	private int id;
+	private String name;
+}

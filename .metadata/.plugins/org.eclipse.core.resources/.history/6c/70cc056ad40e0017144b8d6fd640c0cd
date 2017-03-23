@@ -1,0 +1,19 @@
+package com.bridgelabz.util;
+
+import com.bridgelabz.dto.Course;
+import com.bridgelabz.dto.Student;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+		
+		Student student=new Student();
+		student.setName("Raju");
+		
+		Course course=new Course();
+		course.setCourseName("PCMB");
+
+	}
+
+}

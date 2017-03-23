@@ -1,5 +1,7 @@
 package com.bridgelabz.oneonedto;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +18,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="Person_Info_OneToOne")
-public class Person {
+public class Person implements Serializable {
 
 	@Id
 	@GenericGenerator(name="gen",strategy="increment")

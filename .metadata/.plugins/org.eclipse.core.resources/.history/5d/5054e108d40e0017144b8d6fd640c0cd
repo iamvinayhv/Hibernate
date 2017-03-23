@@ -1,0 +1,11 @@
+package com.bridgelabz.dao;
+
+import com.bridgelabz.dto.Student;
+
+public class StudentDAO {
+
+	public void save(Student stu)
+	{
+		
+	}
+}

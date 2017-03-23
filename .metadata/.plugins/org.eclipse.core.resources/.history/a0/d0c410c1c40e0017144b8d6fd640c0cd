@@ -1,0 +1,38 @@
+package com.bridgelabz.util;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import com.bridgelabz.dao.EmployeeDAO;
+import com.bridgelabz.dto.Details;
+import com.bridgelabz.dto.Employee;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+		Employee employee=new Employee();
+		employee.setName("Maxwell");
+		
+		Details d1=new Details();
+		d1.setMobile(8684332452l);
+		d1.setPhone(4645226133l);
+		
+		
+		Details d2=new Details();
+		d2.setMobile(9789036351l);
+		d2.setPhone(3456657656l);
+		
+		Collection<Details>collection=new ArrayList<Details>();
+		collection.add(d1);
+		collection.add(d2);
+		
+		employee.setDetails(collection);
+		
+		
+		EmployeeDAO dao=new EmployeeDAO();
+		dao.save(employee);
+		
+	}
+
+}

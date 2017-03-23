@@ -1,0 +1,60 @@
+package com.bridgelabz.dto;
+
+import java.io.Serializable;
+import java.util.Collection;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+@Entity
+@Table(name="Mant_Many_Student_Info")
+public class Student implements Serializable{
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	@Column(name="Student_ID")
+	private int id;
+	@Column(name="Student_Name")
+	private String name;
+	
+	@ManyToMany
+	//@JoinTable(name = "STUDENT_COURSE", joinColumns = { @JoinColumn(name = "STUDENT_ID") }, inverseJoinColumns = { @JoinColumn(name = "COURSE_ID") })
+	@JoinTable(name="Student_Course", joinColumns ={@JoinColumn(name="Student_ID")},inverseJoinColumns ={@JoinColumn (name="Course_ID")})
+	Collection<Course>collection;
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Collection<Course> getCollection() {
+		return collection;
+	}
+
+	public void setCollection(Collection<Course> collection) {
+		this.collection = collection;
+	}
+	
+	
+	
+}
