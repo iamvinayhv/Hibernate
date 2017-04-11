@@ -1,0 +1,8 @@
+package com.bridgeLabz.HibernateMappings;
+
+public class Products {
+
+	private int id;
+	private String product_name;
+	private Specification specification;
+}

@@ -1,0 +1,9 @@
+package com.bridgeLabz.HibernateMappings;
+
+public class Specification {
+
+	private int id;
+	private String model;
+	private double price;
+	
+}

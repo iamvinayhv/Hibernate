@@ -1,0 +1,59 @@
+package com.bridgeLabz.HibernateMappings;
+
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="Product_Info")
+public class Products implements Serializable {
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	private int id;
+	private String product_name;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@PrimaryKeyJoinColumn(name="Fk")
+	private Specification specification;
+	
+	public Products(String product_name) {
+		this.product_name = product_name;
+	}
+
+	public Products() {	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getProduct_name() {
+		return product_name;
+	}
+
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+
+	public Specification getSpecification() {
+		return specification;
+	}
+
+	public void setSpecification(Specification specification) {
+		this.specification = specification;
+	}
+	
+}

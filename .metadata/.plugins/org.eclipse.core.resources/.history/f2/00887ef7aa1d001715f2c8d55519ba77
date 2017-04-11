@@ -1,0 +1,16 @@
+package com.bridgeLabz.HibernateMappings;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Products products = new Products("Tv");
+		
+		Specification specification = new Specification();
+		specification.setId(products.getId());
+		specification.setModel("Philips");
+		specification.setPrice(13500.00);
+		
+		products.setSpecification(specification);
+	}
+}

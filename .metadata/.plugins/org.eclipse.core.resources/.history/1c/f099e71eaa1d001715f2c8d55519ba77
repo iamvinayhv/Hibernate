@@ -1,0 +1,23 @@
+package com.bridgeLabz.HibernateMappings;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="Product_Details")
+public class Specification {
+
+	private int id;
+	private String model;
+	private double price;
+	
+	public Specification(int id, String model, double price) {
+		this.id = id;
+		this.model = model;
+		this.price = price;
+	}
+	
+	
+	
+}

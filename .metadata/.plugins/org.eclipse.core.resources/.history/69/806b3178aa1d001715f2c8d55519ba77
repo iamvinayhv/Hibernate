@@ -1,0 +1,9 @@
+package com.bridgeLabz.HibernateMappings;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

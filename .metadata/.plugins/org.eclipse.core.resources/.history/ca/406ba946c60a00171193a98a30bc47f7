@@ -1,8 +1,0 @@
-package com.bridgelabz.dto;
-
-public class Members_123 {
-
-	
-	private int id;
-	private String name;
-}

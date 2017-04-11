@@ -1,0 +1,27 @@
+package com.bridgeLabz.HibernateMappings;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="Product_Info")
+public class Products {
+
+	@Id
+	@GenericGenerator(name="gen",strategy="increment")
+	@GeneratedValue(generator="gen")
+	private int id;
+	private String product_name;
+	private Specification specification;
+	public Products(int id, String product_name, Specification specification) {
+		this.id = id;
+		this.product_name = product_name;
+		this.specification = specification;
+	}
+	
+	
+}
